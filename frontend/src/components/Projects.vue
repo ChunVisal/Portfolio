@@ -143,6 +143,16 @@ const handleMouseLeave = (index) => {
 
   border-radius: 10px;
   position: relative;
+  isolation: isolate;
+}
+
+.project-card-wrapper:hover {
+  z-index: 100;
+}
+
+.scroller {
+  position: relative;
+  z-index: 1;
 }
 
 .projects-grid {
@@ -206,7 +216,7 @@ const handleMouseLeave = (index) => {
   white-space: nowrap;
   transform: translateY(10px);
   animation: slide 0.2s ease;
-  background: rgba(41, 41, 41, 0.97);
+  background: rgba(45, 45, 45, 0.626);
   backdrop-filter: blur(2px);
   width: 100%;
   display: flex;
@@ -214,7 +224,7 @@ const handleMouseLeave = (index) => {
   align-items: center;
   white-space: normal;
   word-wrap: break-word;
-  z-index: 10;
+  z-index: 9999 !important;
   border-radius: 10px;
 }
 

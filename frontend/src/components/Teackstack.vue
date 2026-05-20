@@ -16,7 +16,7 @@
 
         <Teleport to="body">
           <div v-if="activeTech" class="tech-tooltip" :style="tooltipStyle">
-            {{ getTech(activeTech).info }}
+            {{ getTech(activeTech).knowledge }}
           </div>
         </Teleport>
       </div>
@@ -38,17 +38,68 @@ const allTech = ref([
 ]);
 
 const updateTooltip = (e) => {
+  let top = e.clientY + 12;
+  let left = e.clientX + 12;
+
+  // Get tooltip width and height after it renders
+  setTimeout(() => {
+    const tooltip = document.querySelector('.tech-tooltip');
+    if (tooltip) {
+      const tooltipRect = tooltip.getBoundingClientRect();
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+
+      // Adjust if off-screen right
+      if (left + tooltipRect.width > windowWidth - 10) {
+        left = e.clientX - tooltipRect.width - 12;
+      }
+
+      // Adjust if off-screen bottom
+      if (top + tooltipRect.height > windowHeight - 10) {
+        top = e.clientY - tooltipRect.height - 12;
+      }
+
+      // Adjust if off-screen left
+      if (left < 10) {
+        left = 10;
+      }
+
+      // Adjust if off-screen top
+      if (top < 10) {
+        top = 10;
+      }
+
+      tooltipStyle.value = {
+        position: "fixed",
+        top: top + "px",
+        left: left + "px",
+        zIndex: 999999,
+        maxWidth: "280px",
+        whiteSpace: "normal",
+        wordWrap: "break-word"
+      };
+    }
+  }, 10);
+
+  // Initial position
   tooltipStyle.value = {
     position: "fixed",
-    top: e.clientY + 12 + "px",
-    left: e.clientX + 12 + "px",
+    top: top + "px",
+    left: left + "px",
     zIndex: 999999,
+    maxWidth: "280px",
+    whiteSpace: "normal",
+    wordWrap: "break-word"
   };
 };
 
 // Get icon URL from techIcons
 const getTechIconUrl = (tech) => {
   return techIcons[tech]?.url || "";
+};
+
+const getTech = (techName) => {
+  return techIcons[techName] || { knowledge: "No information available" };
 };
 
 // Handle image load errors - show fallback
@@ -64,12 +115,14 @@ const handleImageError = (event) => {
   background: rgba(10, 10, 30, 0.95);
   color: white;
   padding: 10px;
-  width: 220px;
+  width: 250px;
   border-radius: 10px;
   font-size: 0.9rem;
   line-height: 1.4;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   pointer-events: none;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .scroller {
@@ -113,6 +166,7 @@ const handleImageError = (event) => {
 
 .tech-card-container {
   position: relative;
+  z-index: 1;
   width: 70px;
   height: 70px;
   flex-shrink: 0;
@@ -154,6 +208,7 @@ const handleImageError = (event) => {
   width: 24px;
   height: 24px;
   transition: transform 0.3s ease;
+  z-index: 1;
 }
 
 .tag-name {
