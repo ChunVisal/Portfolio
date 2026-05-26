@@ -56,7 +56,7 @@
           <h3 class="col-title">RESOURCES</h3>
           <ul>
             <li>
-              <a href="/public/ChunVisal_Resume.pdf" download class="flex items-center gap-2">
+              <a href="/ChunVisal_Resume.pdf" download class="flex items-center gap-2">
                 <font-awesome-icon :icon="['fas', 'star']" style="color: darkorchid" class="link-bullet" />
                 Download CV
               </a>
