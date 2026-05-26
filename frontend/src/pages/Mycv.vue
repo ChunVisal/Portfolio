@@ -175,7 +175,7 @@ const softSkills = [
                             Full Stack Developer
                         </span>
                     </div>
-                    <a href="/ChunVisalResume.pdf" download>
+                    <a href="/ChunVisal_Resume.pdf" download>
                         <button
                             class="flex cursor-pointer items-center gap-2 bg-[#3b2b5f]/60 border border-[#6e5a9c]/40 px-3 py-1 rounded-lg transition hover:bg-[#4b3c73]/70">
                             <span class="font-mono text-xs sm:text-sm">
@@ -534,7 +534,7 @@ const softSkills = [
                             </span>
 
                             <p v-if="item.details" class="text-xs sm:text-sm text-[#96a0b5] mt-1 mb-2">{{ item.details
-                                }}</p>
+                            }}</p>
                         </div>
                     </div>
                 </div>
@@ -571,7 +571,7 @@ const softSkills = [
 
                 <div v-for="(lang, index) in languageArray" :key="lang.language" class="flex gap-4">
                     <span class="text-[#4b5563] select-none w-5 text-right">{{ 54 + educationData.length + index
-                        }}</span>
+                    }}</span>
                     <div class="ml-10 sm:ml-16"> <span class="text-white">{ </span>
                         <span class="text-sky-400 text-xs sm:text-sm">language</span><span class="text-white">: </span>
                         <span class="text-green-300 text-xs sm:text-sm">"{{ lang.language }}"</span><span

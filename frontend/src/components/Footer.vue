@@ -6,43 +6,23 @@
           <h3 class="col-title">NAVIGATE</h3>
           <ul>
             <li @click="scrollToTop">
-              <font-awesome-icon
-                :icon="['fas', 'star']"
-                style="color: darkorchid"
-                class="link-bullet"
-              />
+              <font-awesome-icon :icon="['fas', 'star']" style="color: darkorchid" class="link-bullet" />
               Home
             </li>
             <li @click="scrollToAbout">
-              <font-awesome-icon
-                :icon="['fas', 'star']"
-                style="color: darkorchid"
-                class="link-bullet"
-              />
+              <font-awesome-icon :icon="['fas', 'star']" style="color: darkorchid" class="link-bullet" />
               About
             </li>
             <li @click="scrollToProjects">
-              <font-awesome-icon
-                :icon="['fas', 'star']"
-                style="color: darkorchid"
-                class="link-bullet"
-              />
+              <font-awesome-icon :icon="['fas', 'star']" style="color: darkorchid" class="link-bullet" />
               Projects
             </li>
             <li>
-              <font-awesome-icon
-                :icon="['fas', 'star']"
-                style="color: darkorchid"
-                class="link-bullet"
-              />
+              <font-awesome-icon :icon="['fas', 'star']" style="color: darkorchid" class="link-bullet" />
               Portfolio
             </li>
             <li @click="NotAvailableYet">
-              <font-awesome-icon
-                :icon="['fas', 'star']"
-                style="color: darkorchid"
-                class="link-bullet"
-              />
+              <font-awesome-icon :icon="['fas', 'star']" style="color: darkorchid" class="link-bullet" />
               Services
             </li>
           </ul>
@@ -52,35 +32,22 @@
           <h3 class="col-title">CONNECT</h3>
           <div class="social-links column-links">
             <a href="https://github.com/ChunVisal" target="_blank">
-              <font-awesome-icon
-                :icon="['fab', 'github']"
-                style="color: #c9c9c9"
-              />
+              <font-awesome-icon :icon="['fab', 'github']" style="color: #c9c9c9" />
               <span>GitHub</span>
             </a>
 
-            <a
-              href="https://www.linkedin.com/in/visal-sal-54b615349"
-              target="_blank"
-            >
-              <font-awesome-icon :icon="['fab', 'linkedin']" 
-              
-                style="color: #c9c9c9"/>
+            <a href="https://www.linkedin.com/in/visal-sal-54b615349" target="_blank">
+              <font-awesome-icon :icon="['fab', 'linkedin']" style="color: #c9c9c9" />
               <span>LinkedIn</span>
             </a>
 
             <a href="https://t.me/joevisal" target="_blank">
-              <font-awesome-icon :icon="['fab', 'telegram']" 
-              
-                style="color: #c9c9c9"/>
+              <font-awesome-icon :icon="['fab', 'telegram']" style="color: #c9c9c9" />
               <span>Telegram</span>
             </a>
 
             <a href="mailto:vsal0882@gmail.com">
-              <font-awesome-icon
-                :icon="['fas', 'envelope']"
-                style="color: #c9c9c9"
-              />
+              <font-awesome-icon :icon="['fas', 'envelope']" style="color: #c9c9c9" />
               <span>Email</span>
             </a>
           </div>
@@ -89,63 +56,27 @@
           <h3 class="col-title">RESOURCES</h3>
           <ul>
             <li>
-              <a
-                href="/ChunVisalResume.pdf" 
-                download
-                class="flex items-center gap-2"
-              >
-                <font-awesome-icon
-                  :icon="['fas', 'star']"
-                  style="color: darkorchid"
-                  class="link-bullet"
-                />
+              <a href="/ChunVisal_Resume.pdf" download class="flex items-center gap-2">
+                <font-awesome-icon :icon="['fas', 'star']" style="color: darkorchid" class="link-bullet" />
                 Download CV
               </a>
             </li>
             <li>
-              <font-awesome-icon
-                :icon="['fas', 'star']"
-                style="color: darkorchid"
-                class="link-bullet"
-              />
+              <font-awesome-icon :icon="['fas', 'star']" style="color: darkorchid" class="link-bullet" />
               Website Templates
             </li>
           </ul>
           <div class="comment-form-wrap mt-6">
             <form @submit.prevent="submitComment" class="flex gap-3">
-              <input
-                v-model="comment"
-                type="text"
-                placeholder="Comment"
-                class="grow border-2 border-gray-500 bg-gray-800/50 py-1 px-5 rounded-sm flex items-center justify-center text-sm"
-              />
-              <button
-                type="submit"
-                class="bg-purple-800 px-5 rounded-sm relative text-sm"
-              >
+              <input v-model="comment" type="text" placeholder="Comment"
+                class="grow border-2 border-gray-500 bg-gray-800/50 py-1 px-5 rounded-sm flex items-center justify-center text-sm" />
+              <button type="submit" class="bg-purple-800 px-5 rounded-sm relative text-sm">
                 <span v-if="!isLoading">Submit</span>
-                <span
-                  v-if="isLoading"
-                  class="absolute inset-0 flex items-center justify-center"
-                >
-                  <svg
-                    class="animate-spin h-4 w-4 text-white"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle
-                      class="opacity-25"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      stroke-width="4"
-                      fill="none"
-                    />
-                    <path
-                      class="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                    />
+                <span v-if="isLoading" class="absolute inset-0 flex items-center justify-center">
+                  <svg class="animate-spin h-4 w-4 text-white" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"
+                      fill="none" />
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
                   </svg>
                 </span>
               </button>
@@ -166,15 +97,9 @@
         </div>
 
         <div class="domain-link-area flex gap-1 items-center">
-          <font-awesome-icon
-            :icon="['fas', 'globe-asia']"
-            class="text-blue-300"
-          />
-          <a
-            href="https://chunvisal.pro"
-            target="_blank"
-            class="text-md font-bold text-gray-200 hover:text-purple-400 transition-colors flex items-center gap-1"
-          >
+          <font-awesome-icon :icon="['fas', 'globe-asia']" class="text-blue-300" />
+          <a href="https://chunvisal.pro" target="_blank"
+            class="text-md font-bold text-gray-200 hover:text-purple-400 transition-colors flex items-center gap-1">
             HTTPS://CHUNVISAL.PRO
           </a>
         </div>
@@ -277,6 +202,7 @@ const submitComment = async () => {
   position: relative;
   overflow: hidden;
 }
+
 .grid {
   max-width: 1200px;
   margin: 0 auto;
@@ -388,7 +314,7 @@ const submitComment = async () => {
     row-gap: 16px;
   }
 
-  .footer-top-section > * {
+  .footer-top-section>* {
     min-width: 0;
   }
 
