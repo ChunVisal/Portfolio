@@ -175,7 +175,7 @@ const softSkills = [
                             Full Stack Developer
                         </span>
                     </div>
-                    <a href="/ChunVisal_Resume.pdf" download>
+                    <a href="/ChunVisalResume.pdf" download>
                         <button
                             class="flex cursor-pointer items-center gap-2 bg-[#3b2b5f]/60 border border-[#6e5a9c]/40 px-3 py-1 rounded-lg transition hover:bg-[#4b3c73]/70">
                             <span class="font-mono text-xs sm:text-sm">
