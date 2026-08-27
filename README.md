@@ -4,10 +4,11 @@ Welcome to my personal developer portfolio!
 This website showcases my projects, skills, experience, and the journey I'm building as a full-stack developer.
 
 Live Website: **<https://chunvisal.pro>**  
-Frontend: Vue 3 + Vite  
-Backend: Node.js (JSON storage system)
 
----
+![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Neon](https://img.shields.io/badge/Neon-06B6D4?style=for-the-badge&logo=neon&logoColor=white)
+![Cloudinary](https://img.shields.io/badge/Cloudinary-06B6D4?style=for-the-badge&logo=cloudinary&logoColor=white)
 
 ## 📌 Features
 
