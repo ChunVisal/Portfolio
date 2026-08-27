@@ -9,7 +9,7 @@ Live Website: **<https://chunvisal.pro>**
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Neon](https://img.shields.io/badge/NEON-2efa9e?style=for-the-badge&logo=neon&logoColor=white)
 ![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white)
-
+![Domain](https://img.shields.io/badge/Domain-0072C6?style=for-the-badge&logo=domains&logoColor=white)
 
 ## 📌 Features
 
